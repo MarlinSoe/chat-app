@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+body {
+  font-family: Lato;
+  background-color: #282828;
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+

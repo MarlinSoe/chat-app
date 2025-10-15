@@ -1,0 +1,109 @@
+/* Message catlout for standalone  */
+
+.individual-message-container-stand-alone {
+    background-color: transparent;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    max-width: 450px;
+    margin-bottom: 10px;
+    
+}
+.individual-message-container-stand-alone-inner-profile-image-container img {
+    height: 36px;
+    width: 36px;
+    border-radius: 100px;
+    object-fit: cover;
+}
+.individual-message-container-stand-alone-inner-profile-image-container {
+    min-width: 36px;
+}
+.individual-message-container-stand-alone-inner-main-info-container {
+    background-color: #2E2E2E;
+    border-radius: 14px;
+    border-bottom-left-radius: 3px;
+    min-width: 100px;
+    position: relative;
+}
+
+.individual-message-container-stand-alone-inner-main-info-message-container p {
+    color: #f1f1f1;
+    font-size: 15px;
+    padding-top: 14px;
+    padding-left: 22px;
+    padding-right: 26px;
+
+    /* Add extra padding at the bottom to avoid overlapping the time */
+    padding-bottom: 30px;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.individual-message-container-stand-alone-inner-main-info-time-container {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    padding-left: 10px;
+}
+.individual-message-container-stand-alone-inner-main-info-time-container p {
+    color: #898989;
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+.individual-message-container-middle {
+    background-color: transparent;
+    max-width: 450px;
+    margin-bottom: 10px;
+    display: flex;
+}
+.individual-message-container-middle-inner-main-info-container {
+    background-color: transparent;
+    border-radius: 14px;
+    min-width: 100px;
+    position: relative;
+    /* margin-left: 56px; */
+}
+
+.individual-message-container-middle-inner-main-info-message-container, .individual-message-container-middle-inner-main-info-message-container-owner {
+    background-color: #2E2E2E;
+    border-radius: 14px;
+    min-width: 150px;
+    position: relative;
+
+}
+.individual-message-container-middle-inner-main-info-message-container-owner {
+    background-color: #3E2A1F;
+}
+.individual-message-container-middle-inner-main-info-message-container p, .individual-message-container-middle-inner-main-info-message-container-owner p{
+    color: #f1f1f1;
+    font-size: 15px;
+    padding-top: 14px;
+    padding-left: 22px;
+    padding-right: 26px;
+
+    /* Add extra padding at the bottom to avoid overlapping the time */
+    padding-bottom: 30px;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.individual-message-container-middle-inner-main-info-time-container {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    padding-left: 10px;
+}
+.individual-message-container-middle-inner-main-info-time-container p{
+    color: #898989;
+    font-size: 13px;
+}

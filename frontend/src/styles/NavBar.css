@@ -1,0 +1,254 @@
+.nav-bar-wrapper {
+    min-width: 330px;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Nav Bar Profile CSS */
+.nav-bar-profile-wrapper {
+    background-color: yellow;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.nav-bar-profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: transparent;
+}
+
+.nav-bar-profile-picture-container {
+    width: 98px;
+    height: 98px;
+    object-fit: cover;
+    
+}
+.nav-bar-profile-picture-container img {
+    width: 98px;
+    height: 98px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.nav-bar-profile-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nav-bar-profile-info-container p {
+    margin: 0;
+    color: #F1F1F1;
+}
+.nav-bar-profile-info-container p:first-child {
+    font-size: 20px;
+    font-weight: 500;
+    color: #F1F1F1;
+}
+.nav-bar-profile-info-container p:last-child {
+    font-size: 12px;
+    max-width: 230px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 5px;
+    color: #F1F1F1;
+}
+
+.nav-bar-profile-button-container button {
+    border: none;
+    width: 150px;
+    height: 33px;
+    border-radius: 14px;
+    background-color: #3E2A1F;
+    color: #C55D34;
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+/* Nav Bar Search CSS */
+.nav-bar-search-outer-main-wrapper {
+    background-color: transparent;
+    width: 87%;
+    position: relative;
+}
+.nav-bar-serach-friend-suggestion-container.active {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    background-color: #3D3D3D;
+    margin-top: 8px;
+    border-radius: 14px;
+
+    overflow: auto;
+    height: 166px;
+
+    position: absolute;
+    top: 100%; /* Places it directly below the input wrapper */
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+}
+.nav-bar-serach-friend-suggestion-container{
+    display: none;
+}
+
+.nav-bar-search-individual-friend-container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    border-radius: 14px;
+    
+    cursor: pointer;
+}
+.nav-bar-search-individual-friend-container:hover{
+    background-color: #333333;
+}
+
+.nav-bar-search-individual-friend-profile-container {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.nav-bar-search-individual-friend-profile-container img {
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+
+    object-fit: cover;
+}
+.nav-bar-search-individual-friend-profile-container p {
+    color: #F1F1F1;
+    font-size: 14px;
+}
+
+.nav-bar-search-individual-friend-add-container {
+    margin-right: 20px;
+}
+.nav-bar-search-wrapper {
+    background-color: #3D3D3D;
+    width: 100%;
+    height: 45px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #3D3D3D;
+}
+.nav-bar-search-wrapper.active {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #C55D34;
+}
+.nav-bar-search-wrapper input {
+    margin-left: 15px;
+
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-size: 15px;
+    color: #f1f1f1;
+
+
+}
+input:focus {
+    outline: none;
+}
+.nav-bar-search-wrapper img {
+    margin-right: 15px;
+}
+
+/* Nav Bar Contact CSS */
+.nav-bar-contact-wrapper {
+    background-color: transparent;
+    width: 87%;
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    flex: 1;
+    overflow-y: auto;         /* Makes it scrollable when content overflows */
+    margin-bottom: 40px;
+}
+
+
+.individual-nav-bar-contact-container {
+    background-color: transparent;
+    width: 100%;
+    height: 71px;
+    display: flex;
+    align-items: center;
+
+    border-radius: 14px;
+    position: relative;
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+}
+.individual-nav-bar-contact-container:hover {
+    background-color: #333333;
+}
+.individual-nav-bar-contact-profile-img-container {
+    object-fit: cover;
+    width: 47px;
+    height: 47px;
+    margin-left: 15px;
+
+}
+.individual-nav-bar-contact-profile-img-container img {
+    width: 47px;
+    height: 47px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+}
+.individual-nav-bar-contact-time-container {
+  position: absolute;
+  top: 15px;     /* Adjust as needed */
+  right: 15px;  /* Adjust for padding/spacing */
+  font-size: 10px;
+  font-weight: 600;
+  color: #aaa;
+}
+.individual-nav-bar-contact-info-container {
+    margin-right: 15px;
+    margin-left: 15px;
+    background-color: transparent;
+}
+.individual-nav-bar-contact-info-container p {
+    margin: 0;
+    color: #f1f1f1;
+}
+.individual-nav-bar-contact-info-container p:first-child {
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+.individual-nav-bar-contact-info-container p:last-child {
+    font-size: 12px;
+    font-weight: 300px;
+    color: #aaa;
+}

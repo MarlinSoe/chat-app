@@ -1,0 +1,99 @@
+
+.sign-up-outer-main-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sign-up-wrapper form {
+  width: 100%;
+}
+
+
+.sign-up-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Make sure it's on top */
+
+  background-color: transparent;
+    width: 90%;
+    max-width: 365px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.sign-up-title-container p {
+    text-align: center;
+    color: #F1F1F1;
+    font-size: 25px;
+    font-weight: 500;
+
+    margin-bottom: 47px;
+}
+
+.sign-up-individual-main-container {
+    width: 100%;
+    background-color: transparent;
+}
+
+.p-indvidual-title {
+    color: #F1F1F1;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.sign-up-individual-main-indvidual-container {
+    background-color: transparent;
+    border: solid;
+    border-radius: 10px;
+    border-color: #F1F1F1;
+    width: 100%;
+    height: 49px;
+    margin-bottom: 10px;
+
+    display: flex;
+    text-align: center;
+
+
+}
+.sign-up-individual-main-indvidual-container input {
+    width: 100%;
+    margin-left: 10px;
+    color: #F1F1F1;
+    font-size: 15px;
+}
+.sign-up-individual-main-indvidual-container input::placeholder {
+    color: #BDBDBD;
+    font-size: 15px;
+}
+
+.sign-up-individual-main-container{
+    margin-bottom: 35px;
+}
+
+.sign-up-button-container {
+    width: 100%;
+}
+
+.sign-up-button-container button{
+    width: 100%;
+    height: 49px;
+    background-color: #3E2A1F;
+    border-radius: 10px;
+    color: #C55D34;
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+
+.sign-up-link-page-p {
+    color: #BDBDBD;
+    font-size: 12px;
+    margin-top: 4px;
+}

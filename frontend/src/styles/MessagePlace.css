@@ -1,0 +1,109 @@
+.message-place-wrapper {
+    flex: 1;
+    background-color: #1E1E1E;
+    border-radius: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    
+
+}
+
+.message-place-inner-wrapper {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.message-place-header-container {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 95%;
+    border-bottom: solid;
+    border-bottom-color: #f1f1f1;
+    border-bottom-width: 0.1px;
+
+}
+.message-place-header-container p{
+    color: #f1f1f1;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+
+
+
+.message-place-message-display-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 10px;
+    width: 95%;
+    background-color: transparent;
+    margin-bottom: 100px;
+}
+
+
+.message-place-send-message-container {
+    padding: 6px;
+    background-color: #3D3D3D;
+    position: absolute;
+    border-radius: 14px;
+
+    bottom: 25px;
+    width: 95%;
+
+
+}
+
+.message-place-send-message-container form {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.message-place-send-message-container form textarea {
+    flex: 1;
+    height: 40px;
+    resize: none; /* optional: prevents manual resizing */
+    overflow-y: auto;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    margin-right: 10px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+
+.message-place-send-message-container form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+.message-place-send-message-container form button {
+    width: 37px;
+    height: 37px;
+    background-color: #DB7055;
+    align-items: center;
+    border-radius: 10px;
+}
+.message-place-send-message-container form button img {
+    margin: auto;
+}
+
+
