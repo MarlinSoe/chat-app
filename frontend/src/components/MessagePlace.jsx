@@ -11,6 +11,8 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
     const messagesEndRef = useRef(null);
     const [isNearBottom, setIsNearBottom] = useState(true);
 
+    const [loading, setLoading] = useState(false)
+
     
 
     const messagesList = messages?.messages || [];
@@ -20,6 +22,8 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
 
     const [first, second] = [myInfo.username, currentFriend].sort();
     const combinedUsername = `${first}${second}`; // e.g., "@marlin@soe"
+
+
 
 
     const handleScroll = (e) => {
@@ -53,6 +57,7 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
+            setLoading(true)
             const response = await api.put(`/messages/chat/update/${combinedUsername}`, {
                 messageContent: currentMessageWrite,
                 ownerUsername: myInfo.username
@@ -67,6 +72,9 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
             
         } catch (error) {
             toast.error('Could not send the message.')
+        }
+        finally {
+            setLoading(false)
         }
     }
 
@@ -111,7 +119,7 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
                         <div className='message-place-send-message-container'>
                             <form onSubmit={handleSubmit}>
                                 <textarea name="" id="" placeholder='Write you message...' onChange={(e) => setCurrentMessageWrite(e.target.value)} value={currentMessageWrite}></textarea>
-                                <button onClick={handleSubmit}><img src={sendIcon} alt="" /></button>
+                                <button onClick={handleSubmit} disabled={loading}><img src={sendIcon} alt="" /></button>
                             </form>
                         </div>
                     }
