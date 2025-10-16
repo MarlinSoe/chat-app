@@ -1,11 +1,66 @@
+/* NavBar.css */
+
 .nav-bar-wrapper {
     min-width: 330px;
     background-color: transparent;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease;
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-bar-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: #282828;
+        z-index: 999;
+        transform: translateX(0); /* shown by default */
+        width: 250px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar-wrapper.collapsed {
+        transform: translateX(-100%);
+    }
+}
+.nav-toggle-button {
+    display: none;
+    position: fixed;
+    
+}
+.nav-toggle-button img {
+    width: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-toggle-button {
+        display: flex;  /* Flex ensures icon is centered */
+        top: 16px;
+        right: 15px;
+        z-index: 1000;
+        background-color: #fff;
+        border: none;
+        font-size: 24px;
+        line-height: 1; /* Prevent extra vertical space */
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        border-radius: 4px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
 
 /* Nav Bar Profile CSS */
 .nav-bar-profile-wrapper {

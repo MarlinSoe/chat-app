@@ -9,6 +9,16 @@
 
 }
 
+
+@media (max-width: 768px) {
+    .message-place-wrapper {
+        margin: 0;
+        border-radius: 0;
+        
+
+    }
+}
+
 .message-place-inner-wrapper {
     background-color: transparent;
     position: relative;
