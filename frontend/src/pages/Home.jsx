@@ -18,6 +18,9 @@ function Home() {
 
     const [first, second] = [myInfo.username, currentFriend].sort();
     const combinedUsername = `${first}${second}`; // e.g., "@marlin@soe"
+
+    const [collapsed, setCollapsed] = useState(true);
+
     useEffect(() => {
         const fetchMyInfoAndMessages = async () => {
             try {
@@ -52,8 +55,8 @@ function Home() {
     return (
         <>
             <div className="home-wrapper">
-                <NavBar user={user} myUsername={myUsername} myBio={myBio} myInfo={myInfo} setMyInfo={setMyInfo} setMessages={setMessages} setCurrentFriend={setCurrentFriend}  currentFriend={currentFriend} setShowSendMessage={setShowSendMessage} messages={messages}/>
-                <MessagePlace myInfo={myInfo} messages={messages} user={user} currentFriend={currentFriend} setMessages={setMessages} showSendMessage={showSendMessage}/>
+                <NavBar user={user} myUsername={myUsername} myBio={myBio} myInfo={myInfo} setMyInfo={setMyInfo} setMessages={setMessages} setCurrentFriend={setCurrentFriend}  currentFriend={currentFriend} setShowSendMessage={setShowSendMessage} messages={messages} collapsed={collapsed}/>
+                <MessagePlace myInfo={myInfo} messages={messages} user={user} currentFriend={currentFriend} setMessages={setMessages} showSendMessage={showSendMessage} setCollapsed={setCollapsed}/>
             </div>
         </>
     );

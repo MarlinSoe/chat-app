@@ -7,7 +7,9 @@ import { useRef, useState, useEffect } from 'react';
 import api from '../lib/axios.js'
 import toast from 'react-hot-toast'
 
-function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showSendMessage}) {
+import icon from '../assets/menu-burger.svg'
+
+function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showSendMessage, setCollapsed}) {
     const messagesEndRef = useRef(null);
     const [isNearBottom, setIsNearBottom] = useState(true);
 
@@ -23,8 +25,11 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
     const [first, second] = [myInfo.username, currentFriend].sort();
     const combinedUsername = `${first}${second}`; // e.g., "@marlin@soe"
 
+    
 
-
+    const toggleNav = () => {
+        setCollapsed(prev => !prev);
+    };
 
     const handleScroll = (e) => {
         const { scrollTop, scrollHeight, clientHeight } = e.currentTarget;
@@ -89,6 +94,12 @@ function MessagePlace({myInfo, messages, user, currentFriend, setMessages, showS
                 <div className='message-place-inner-wrapper'>
                     <div className='message-place-header-container'>
                         <p>{currentFriend ? currentFriend : 'Click A Friend To Chat'}</p>
+                        <button 
+                            className="nav-toggle-button"
+                            onClick={toggleNav}
+                        >
+                                <img src={icon} alt="" />
+                        </button>
                     </div>
                     <div className='message-place-message-display-container' onScroll={handleScroll}> 
                         {

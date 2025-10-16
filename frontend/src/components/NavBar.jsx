@@ -9,9 +9,9 @@ import icon from '../assets/menu-burger.svg'
 function NavBar({
     user, myUsername, myBio, myInfo, setMyInfo,
     setMessages, setCurrentFriend, currentFriend,
-    setShowSendMessage, messages
+    setShowSendMessage, messages, collapsed
 }) {
-    const [collapsed, setCollapsed] = useState(true);
+    
 
     const toggleNav = () => {
         setCollapsed(prev => !prev);
@@ -20,12 +20,7 @@ function NavBar({
     return (
         <>
             {/* Toggle Button (visible only on mobile) */}
-            <button 
-                className="nav-toggle-button"
-                onClick={toggleNav}
-            >
-                 <img src={icon} alt="" />
-            </button>
+            
 
             <div className={`nav-bar-wrapper ${collapsed ? 'collapsed' : ''}`}>
                 <NavBarProfile myInfo={myInfo}/>
