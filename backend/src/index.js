@@ -11,7 +11,9 @@ const app = express()
 const PORT = 5001
 
 // middleware
-app.use(cors({origin: 'http://localhost:5173'}));
+// app.use(cors({origin: 'http://localhost:5173'}));
+
+app.use(cors({origin: 'https://chat-app-frontend-ten-taupe.vercel.app'}));
 app.use(express.json())
 
 
