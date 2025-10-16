@@ -21,6 +21,8 @@
         transform: translateX(0); /* shown by default */
         width: 250px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+
+        height: 100%;
     }
 
     .nav-bar-wrapper.collapsed {
