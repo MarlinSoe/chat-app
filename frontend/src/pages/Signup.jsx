@@ -1,6 +1,6 @@
 
 import { BackgroundLinesDemo } from '../components/AlreadyComponent/SignupBg'
-import '../styles/SignUp.css'
+import '../styles/Signup.css'
 import api from '../lib/axios'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
